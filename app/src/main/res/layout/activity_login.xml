@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:padding="40dp"
+                android:src="@drawable/quiz_logo"
+                android:id="@+id/imgViewLogo"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <android.support.design.widget.TextInputLayout
+                app:layout_constraintTop_toBottomOf="@id/imgViewLogo"
+                android:id="@+id/txtInputLayoutUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_person_black_24dp"
+                    android:drawableLeft="@drawable/ic_person_black_24dp"
+                    android:id="@+id/editTextEmailOrUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email or Username" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                app:passwordToggleEnabled="true"
+                android:id="@+id/txtInputLayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtInputLayoutUsername">
+
+                <android.support.design.widget.TextInputEditText
+                    android:inputType="textPassword"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_lock_black_24dp"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                app:layout_constraintTop_toBottomOf="@id/txtInputLayoutPassword" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+            <ProgressBar
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutPassword"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/progressBarLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+<!--            <TextView
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:text="Preview Program"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />-->
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

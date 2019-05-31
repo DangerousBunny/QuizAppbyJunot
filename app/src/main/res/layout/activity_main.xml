@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/linearLayoutQuestion"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:padding="9dp">
+
+                    <TextView
+                        android:id="@+id/score_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Score"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/Score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0"
+                        android:textSize="22sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="41dp"
+                    android:padding="9dp"
+                    android:text="What is NBA?"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:background="#151f6d"
+                    android:padding="8dp"
+                    android:text="National Basketball Association"
+                    android:textColor="#ffffff" />
+                />
+
+                <Button
+                    android:id="@+id/option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:background="#151f6d"
+                    android:padding="8dp"
+                    android:text="National Baseball League"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/option3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:background="#151f6d"
+                    android:padding="8dp"
+                    android:text="National Badminton League"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/option4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:background="#151f6d"
+                    android:padding="8dp"
+                    android:text="National Beach Ball League"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutScore"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="20dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="Congratulations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtViewGreeting"
+                    android:textSize="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Hello User, Your Score is"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:padding="20dp"
+                    android:id="@+id/txtViewScore"
+                    android:textSize="50dp"
+                    android:gravity="center_horizontal"
+                    android:text="7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:text="Back to Login"
+                    android:id="@+id/btnBackToLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
